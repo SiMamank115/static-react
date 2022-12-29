@@ -1,25 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import Home from "./Home";
+import Leftbar from "./BarLeftSide";
+import Rightbar from "./BarRightSide";
+import { BrowserRouter } from "react-router-dom";
+export default function App() {
+    return (
+        <div className="home w-full min-h-screen mx-auto flex items-center" id="Home">
+            <BrowserRouter>
+            <Leftbar />
+                <Home />
+            <Rightbar />
+            </BrowserRouter>
+        </div>
+    );
 }
-
-export default App;
